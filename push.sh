@@ -1,7 +1,7 @@
 date=`date`
 github_id="dl_frontend"
 github_token="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"
-github_address="https://github.com/nhn-commerce-fe/design-system"
+github_address="github.com/nhn-commerce-fe/design-system"
 logFile="push.log"
 
 echo 'git add . ...'
