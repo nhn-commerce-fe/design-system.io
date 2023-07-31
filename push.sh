@@ -34,7 +34,7 @@ sleep 2
 result="`awk '/Everything up-to-date' $logFile 2>&1`"
 echo $result
 
-if [ -z "$result"]:then
+if [ -z "$result"];then
   echo "git push Success" && echo "git push Success" >> $logFile 2>&1
 else 
   echo "!! git push ERROR please check $logFile" && echo "git push ERROR please check $logFile" >> $logFile 2>&1
