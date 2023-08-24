@@ -1,0 +1,12 @@
+@use '../abstract';
+
+.progress-section {
+  padding-left: 16px;
+  padding-right: 16px;
+
+  @include abstract.media-bp-up('md') {
+    padding-left: 144px;
+    padding-right: 144px;
+    padding-bottom: 58px;
+  } // mb
+}

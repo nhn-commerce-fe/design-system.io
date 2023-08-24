@@ -1,0 +1,58 @@
+@use '../../base/variable';
+@use '../../base/token';
+@use '../../abstract';
+
+.hero {
+  // @include abstract.debug();
+  padding: 64px 16px;
+
+  &__content {
+    margin-bottom: 64px;
+  }
+
+  &__badge {
+    margin-bottom: 16px;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+    color: token.$gray-700;
+    font-size: abstract.rem(token.$font-size-7);
+    line-height: token.$line-heights-3 + 'px';
+    font-weight: token.$font-weights-commerce-sans-2;
+
+    br {
+      display: none;
+    }
+  }
+
+  &__text {
+    margin-bottom: 32px;
+    color: token.$gray-400;
+    font-size: abstract.rem(token.$font-size-3);
+  }
+
+  &__img {
+    background-color: token.$gray-700;
+  }
+
+  // pc
+  @include abstract.media-bp-up('md') {
+    padding: 0;
+
+    &__title {
+      margin-bottom: 24px;
+      line-height: token.$line-heights-1 + 'px';
+      font-size: abstract.rem(token.$font-size-9);
+    } // tit
+
+    &__text {
+      margin-bottom: 48px;
+      font-size: abstract.rem(token.$font-size-4);
+    }
+  } // md
+
+  &__content > *:last-child {
+    margin-bottom: 0;
+  }
+}

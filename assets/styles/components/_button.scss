@@ -1,0 +1,265 @@
+@use '../base/token';
+@use '../abstract';
+@use '../components/link';
+
+$btn: (
+  'primary-red': (
+    'default': (
+      border: token.$primary-red-500,
+      bg: token.$primary-red-450,
+      color: token.$base-white
+    ),
+    'hover': (
+      border: token.$primary-red-700,
+      bg: token.$primary-red-600,
+      color: token.$base-white
+    ),
+    'focus': (
+      border: token.$primary-red-500,
+      bg: token.$primary-red-450,
+      color: token.$base-white,
+      shadow: token.$shadow-xs-focused-4px-primary-color-100
+    ),
+    'disable': (
+      border: token.$primary-red-200,
+      bg: token.$primary-red-100,
+      color: token.$base-white
+    )
+  ),
+  'primary-blue': (
+    'default': (
+      border: token.$secondary-gray-blue-500,
+      bg: token.$secondary-gray-blue-450,
+      color: token.$base-white
+    ),
+    'hover': (
+      border: token.$secondary-gray-blue-700,
+      bg: token.$secondary-gray-blue-600,
+      color: token.$base-white
+    ),
+    'focus': (
+      border: token.$secondary-gray-blue-500,
+      bg: token.$secondary-gray-blue-450,
+      color: token.$base-white,
+      shadow: token.$shadow-xs-focused-4px-primary-gray-100
+    ),
+    'disable': (
+      border: token.$secondary-gray-blue-200,
+      bg: token.$secondary-gray-blue-100,
+      color: token.$base-white
+    )
+  ),
+  'tertiary-gray': (
+    'default': (
+      bg: token.$base-white,
+      color: token.$gray-700
+    ),
+    'hover': (
+      bg: token.$gray-50,
+      color: token.$gray-700
+    ),
+    'disable': (
+      bg: token.$base-white,
+      color: token.$base-white
+    )
+  ),
+  'secondary-color': (
+    'default': (
+      border: token.$primary-red-200,
+      bg: token.$primary-red-50,
+      color: token.$primary-red-600
+    ),
+    'hover': (
+      border: token.$primary-red-300,
+      bg: token.$primary-red-100,
+      color: token.$primary-red-700
+    ),
+    'focus': (
+      border: token.$primary-red-200,
+      bg: token.$primary-red-50,
+      color: token.$primary-red-600,
+      shadow: token.$shadow-xs-focused-4px-primary-color-100
+    ),
+    'disable': (
+      border: token.$primary-red-100,
+      bg: token.$primary-red-50,
+      color: token.$primary-red-300
+    )
+  ),
+  'secondary-gray': (
+    'default': (
+      border: token.$gray-200,
+      bg: token.$base-white,
+      color: token.$gray-700
+    ),
+    'hover': (
+      border: token.$gray-200,
+      bg: token.$gray-50,
+      color: token.$gray-700
+    ),
+    'focus': (
+      border: token.$gray-200,
+      bg: token.$base-white,
+      color: token.$gray-700,
+      shadow: token.$shadow-xs-focused-4px-gray-100
+    ),
+    'disable': (
+      border: token.$gray-200,
+      bg: token.$base-white,
+      color: token.$gray-200
+    )
+  ),
+  'tertiary-color': (
+    'default': (
+      bg: token.$base-white,
+      color: token.$blue-500
+    ),
+    'hover': (
+      bg: token.$blue-50,
+      color: token.$blue-600
+    ),
+    'disable': (
+      bg: token.$base-white,
+      color: token.$gray-200
+    )
+  )
+);
+
+$size: (
+  'sm'
+    (
+      pd: 8px 14px,
+      font: abstract.rem(token.$font-size-1),
+      height: 37px
+    ),
+  'md'
+    (
+      pd: 10px 16px,
+      font: abstract.rem(token.$font-size-1),
+      height: 41px
+    ),
+  'lg'
+    (
+      pd: 10px 18px,
+      font: abstract.rem(token.$font-size-2),
+      height: 44px
+    ),
+  'xl'
+    (
+      pd: 12px 20px,
+      font: abstract.rem(token.$font-size-2),
+      height: 48px
+    ),
+  '2xl'
+    (
+      pd: 16px 28px,
+      font: abstract.rem(token.$font-size-3),
+      height: 59px
+    )
+);
+
+@mixin btn-theme($bg, $border, $color) {
+  background-color: $bg;
+  @if ($border) {
+    border: 1px solid $border;
+  }
+  color: $color;
+}
+
+.btn {
+  $this: &;
+
+  display: inline flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: token.$font-weights-commerce-sans-2;
+
+  &__label {
+    line-height: 1;
+  }
+
+  @each $name, $info in $btn {
+    &--#{$name} {
+      @if ($name != 'tertiary-gray') and ($name != 'tertiary-color') {
+        box-shadow: token.$shadow-xs;
+      }
+
+      @each $type, $colors in $info {
+        @if $type == 'default' {
+          @include btn-theme(map-get($colors, 'bg'), map-get($colors, 'border'), map-get($colors, 'color'));
+        }
+
+        @if $type == 'hover' {
+          &:hover:not([disabled], .is-disable) {
+            @include btn-theme(map-get($colors, 'bg'), map-get($colors, 'border'), map-get($colors, 'color'));
+          }
+        }
+
+        @if $type == 'focus' {
+          &:focus:not([disabled], .is-disabled) {
+            @include btn-theme(map-get($colors, 'bg'), map-get($colors, 'border'), map-get($colors, 'color'));
+            box-shadow: map-get($colors, 'shadow');
+          }
+        }
+
+        @if $type == 'disable' {
+          &:disabled,
+          &.is-disable {
+            @include btn-theme(map-get($colors, 'bg'), map-get($colors, 'border'), map-get($colors, 'color'));
+
+            cursor: default;
+          }
+        }
+      }
+    }
+  } // theme
+
+  @each $name, $info in $size {
+    &--#{$name} {
+      padding: map-get($info, 'pd');
+      height: map-get($info, 'height');
+      font-size: map-get($info, 'font');
+    }
+  }
+
+  &.is-full {
+    width: 100%;
+  }
+
+  &.is-link {
+    padding: 0;
+    border: 0;
+    box-shadow: none;
+  }
+
+  @each $name, $info in link.$link-properties {
+    &--#{$name} {
+      color: map-get($info, 'default');
+
+      &:hover,
+      &:hover:not(.is-disable) {
+        color: map-get($info, 'hover');
+      }
+
+      &.is-disable {
+        color: map-get($info, 'disable');
+        pointer-events: none;
+        cursor: default;
+      }
+    }
+  } // link size
+
+  svg {
+    stroke: currentColor;
+  }
+}
+
+[class*='btn--link'] {
+  padding: 0;
+  height: auto !important;
+  background-color: transparent !important;
+}

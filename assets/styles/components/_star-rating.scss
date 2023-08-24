@@ -1,0 +1,27 @@
+@use '../abstract';
+@use '../sprite';
+
+.star-rating {
+  // @include abstract.debug();
+  @include abstract.relative();
+
+  display: inline-block;
+  overflow: hidden;
+  width: 116px;
+  height: 20px;
+
+  &::before,
+  &__count {
+    @include abstract.absolute($top: 0, $left: 0);
+    @include abstract.bg2x-sprite();
+  }
+
+  &::before {
+    @include abstract.sprite2x(sprite.$star-gray);
+    content: '';
+  }
+
+  &__count {
+    @include abstract.sprite2x(sprite.$star-yellow);
+  } // after
+}

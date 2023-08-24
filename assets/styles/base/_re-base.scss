@@ -1,0 +1,5 @@
+@use './variable' as v;
+
+body {
+  font: 1rem / 1.5 v.$reset-font-face;
+}

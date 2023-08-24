@@ -1,0 +1,57 @@
+@use '../base/variable';
+@use '../base/token';
+@use '../abstract';
+
+.tab-module {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: variable.$max-width;
+
+  &__btns {
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-bottom: 16px;
+  }
+
+  .tab {
+    max-width: none;
+    &__btn {
+      width: 100%;
+    }
+  }
+
+  &__media {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    background-color: token.$gray-100;
+
+    img {
+      width: 100%;
+    }
+  } // media
+
+  @include abstract.media-bp-up('ex') {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 560px;
+    padding: 0 calc(32px / variable.$max-width * 100%);
+
+    &__btns {
+      margin-bottom: 0;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .tab {
+      max-width: 400px;
+    }
+
+    &__media {
+      border-radius: 16px;
+      max-width: 576px;
+    }
+  }
+}

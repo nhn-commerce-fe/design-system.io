@@ -1,0 +1,81 @@
+@use '../base/variable' as v;
+@use '../abstract';
+@use '../sprite';
+
+$logos: (
+  'commerce': (
+    sprite.$logo-m,
+    sprite.$logo-commerce
+  ),
+  'commerce-white': (
+    sprite.$logo-commerce-white,
+    sprite.$logo-commerce-white
+  ),
+  'store': (
+    sprite.$m-logo-store,
+    sprite.$logo-store
+  ),
+  'workspace': (
+    sprite.$m-logo-workspace,
+    sprite.$logo-workspace
+  ),
+  'shopby': (
+    sprite.$m-logo-shopby,
+    sprite.$logo-shopby
+  ),
+  'plusshop': (
+    sprite.$m-logo-plusshop,
+    sprite.$logo-plusshop
+  ),
+  // 'marketing': (
+  //   sprite.$m-logo-marketing,
+  //   sprite.$logo-marketing
+  // ),
+  // 'devcenter': (
+  //   sprite.$m-logo-workspace,
+  //   sprite.$logo-devcenter
+  // )
+);
+
+.logo {
+  display: inline flex;
+  align-items: center;
+
+  &__anchor {
+    @include abstract.bg2x-sprite();
+  }
+
+  &__root {
+    @each $name in ('black', 'white') {
+      &-#{$name} {
+        $type: if($name == 'black', 'commerce', 'commerce-white');
+        $root-sprite: map-get($logos, $type);
+
+        @include abstract.sprite2x(nth($root-sprite, 1));
+
+        @include abstract.media-bp-up('ex') {
+          @at-root .logo__root-#{$name}:not(.is-mobile) {
+            @include abstract.sprite2x(nth($root-sprite, 2));
+            width: 129px;
+          }
+        } // mixin
+      }
+    } // each
+  }
+
+  @each $name, $info in $logos {
+    &__#{$name} {
+      @if ($name != 'commerce') {
+        @include abstract.sprite2x(nth($info, 1));
+
+        margin-left: 6px;
+
+        @include abstract.media-bp-up('ex') {
+          @include abstract.sprite2x(nth($info, 2));
+          margin-top: 10px;
+          margin-left: 12px;
+        }
+      }
+    }
+  }
+}

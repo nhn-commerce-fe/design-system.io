@@ -1,0 +1,39 @@
+@use '../base/variable';
+@use '../base/token';
+@use '../abstract';
+
+.tab {
+  max-width: 576px;
+
+  &__item {
+    padding: 16px 0 16px 24px;
+    border-left: 4px solid token.$gray-100;
+
+    &.is-active {
+      border-left-color: token.$secondary-gray-blue-500;
+    }
+
+    & > *:last-child {
+      margin-bottom: 0;
+    }
+  } // item
+
+  &__btn {
+    cursor: pointer;
+  } // btn
+
+  &__label {
+    display: block;
+    margin-bottom: 8px;
+    color: token.$gray-700;
+    font-size: abstract.rem(token.$font-size-4);
+    font-weight: token.$font-weights-commerce-sans-2;
+  }
+
+  &__desc {
+    display: block;
+    margin-bottom: 20px;
+    font-weight: token.$font-weights-commerce-sans-0;
+    line-height: token.$line-heights-7 + 'px';
+  } // desc
+}

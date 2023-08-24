@@ -1,0 +1,27 @@
+@use '../base/variable';
+@use '../base/token';
+@use '../abstract';
+
+html.is-lock,
+html.is-lock body {
+  overflow: hidden;
+}
+
+// ================================
+// 컨텐츠 섹션 wrap
+// bp: md (768px)
+// ================================
+.section-wrap {
+  $space-pc: 32px;
+  // @include abstract.debug();
+
+  max-width: variable.$max-width;
+  padding: 64px variable.$gap-sm;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: token.$base-white;
+
+  @include abstract.media-bp-up('md') {
+    padding: 96px $space-pc;
+  }
+}

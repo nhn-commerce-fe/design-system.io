@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="commerce-header"></div>
+  <div id="root"></div>
+  <div>
+    <button onclick="javascript: test();">헤더 생성 테스트</button>
+  </div>
+  <script>
+    function test() {
+      const header = new CommerceHeader();
+      header.init();
+      header.create();
+    }
+  </script>
+</body>
+
+</html>

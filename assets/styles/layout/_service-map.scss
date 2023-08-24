@@ -1,0 +1,41 @@
+@use '../abstract';
+@use '../base/token';
+
+.service-map {
+  @include abstract.absolute($top: 80px, $left: 0);
+
+  width: 100%;
+  z-index: 5;
+  background-color: token.$white;
+
+  &__header {
+    @include abstract.absolute($bottom: 0);
+
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 40px;
+    background: token.$gray-50;
+    width: 100%;
+  }
+
+  &__home-link {
+    padding-left: 15px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    padding: 32px 56px calc(84px + 32px);
+  }
+
+  &__menu-title {
+    margin-bottom: 12px;
+    font-size: abstract.rem(token.$font-size-1);
+    color: token.$blue-450;
+    font-weight: token.$font-weights-commerce-sans-2;
+  }
+
+  @include abstract.media-bp-down('ex') {
+    display: none;
+  }
+}

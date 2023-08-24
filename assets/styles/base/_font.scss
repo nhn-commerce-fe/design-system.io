@@ -1,0 +1,20 @@
+@use './variable' as v;
+@use '../abstract';
+
+$font-info: (
+  regular: 400,
+  medium: 500,
+  bold: 700
+);
+
+@each $name, $weight in $font-info {
+  @include abstract.font-face(
+    $name: v.$font-face,
+    $font-path: 'https://rlyiz0wtg.toastcdn.net/CommerceSans-#{$name}',
+    $weight: $weight,
+    $exts: (
+      woff,
+      woff2
+    )
+  );
+}

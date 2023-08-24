@@ -1,0 +1,344 @@
+@use '../abstract';
+@use '../base/token';
+
+$gray-200: #eaecf0;
+
+.g-footer {
+  // @include abstract.debug();
+  @include abstract.relative();
+
+  padding: 48px 16px;
+  background-color: token.$gray-700;
+
+  // link-gray override
+  &__outlink .link,
+  .contact .link:last-of-type {
+    color: token.$gray-300;
+  }
+
+  .contact .link,
+  .corp .link {
+    color: token.$gray-400;
+  }
+
+  .link:hover:not(.disabled) {
+    color: token.$base-white;
+  }
+
+  &__outlink {
+    display: none;
+  }
+
+  &__logo {
+    margin-bottom: 16px;
+  }
+}
+
+.contact {
+  $gap: 10px;
+
+  margin-left: -$gap;
+  margin-bottom: 32px;
+  color: token.$gray-400;
+  font-weight: token.$font-weights-commerce-sans-0;
+
+  &__item {
+    @include abstract.relative();
+
+    display: inline-block;
+    margin-left: $gap;
+
+    &::after {
+      display: inline-block;
+      content: '';
+      transform: translateY(2px);
+      width: 2px;
+      height: 1rem;
+      margin-left: $gap;
+      background-color: token.$gray-600;
+    }
+
+    &:last-child {
+      &::after {
+        content: none;
+      }
+    }
+
+    &:first-child,
+    &:last-child {
+      font-weight: token.$font-weights-commerce-sans-2;
+    }
+  }
+}
+
+.corp {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  text-align: left;
+  gap: 12px;
+  margin-bottom: 48px;
+
+  .link {
+    display: block;
+
+    &:nth-child(2) {
+      grid-row: 2;
+      grid-column: 1;
+      color: token.$gray-300;
+      font-weight: token.$font-weights-commerce-sans-2;
+    }
+
+    &:nth-child(3) {
+      grid-row: 3;
+      grid-column: 1;
+    }
+  }
+}
+
+.g-footer:not(.g-footer--simple) .dropdown {
+  display: block;
+  margin-bottom: 48px;
+
+  & > .btn {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  &__content {
+    z-index: 5;
+    overflow-y: auto;
+    width: 100%;
+    height: 200px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+} // dropdown :not(simple)
+
+.g-footer__global {
+  display: none;
+}
+
+.g-footer__bottom {
+  @include abstract.relative();
+
+  display: flex;
+  flex-direction: column;
+  padding-top: 32px;
+  border-top: 1px solid token.$gray-500;
+  color: token.$gray-400;
+  font-weight: token.$font-weights-commerce-sans-1;
+
+  & > p {
+    order: 2;
+  }
+
+  .ico--mark-isms {
+    @include abstract.absolute($top: 32px, $right: 0);
+  }
+}
+
+.g-footer__sns {
+  order: 1;
+  margin-bottom: 24px;
+
+  .sns:nth-child(n + 2) {
+    margin-left: 24px;
+  }
+}
+
+// ==================================================================
+// pc
+// ==================================================================
+@include abstract.media-bp-up('ex') {
+  .g-footer {
+    padding: 64px 112px 48px;
+  }
+
+  .g-footer__outlink {
+    display: block;
+    margin-bottom: 48px;
+    font-size: abstract.rem(token.$font-size-1);
+
+    & > div {
+      display: flex;
+
+      &:nth-child(n + 2) {
+        margin-top: 35px;
+      }
+
+      dd {
+        display: flex;
+        gap: 24px;
+      }
+    }
+
+    dt {
+      margin-right: 16px;
+      width: -webkit-max-content;
+      width: -moz-max-content;
+      width: max-content;
+      min-width: 140px;
+      color: token.$base-white;
+    }
+  }
+
+  .g-footer__logo {
+    padding-top: 32px;
+    border-top: 1px solid token.$gray-500;
+  }
+
+  .contact {
+    max-width: 708px;
+
+    [href^='mailto'] {
+      text-decoration: underline;
+    }
+
+    &__item {
+      &:nth-child(3),
+      &:nth-child(6) {
+        &::after {
+          content: none;
+        }
+      }
+    }
+  } // contact
+
+  .corp {
+    display: block;
+
+    .link {
+      display: inline-block;
+
+      &:nth-child(n + 2) {
+        margin-left: 24px;
+      }
+    }
+  } // corp
+
+  .g-footer__inner {
+    @include abstract.relative();
+  }
+
+  .g-footer:not(.g-footer--simple) .dropdown {
+    @include abstract.absolute($top: 32px, $right: 0);
+    z-index: 5;
+  }
+
+  .g-footer .dropdown__content {
+    right: 0;
+    transform: translateX(0);
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+
+  .g-footer__bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 0;
+    border-top-width: 0;
+
+    & > p {
+      order: 0;
+    }
+
+    .ico--mark-isms {
+      top: -106px;
+    }
+  }
+
+  .g-footer__sns {
+    margin-bottom: 0;
+  }
+}
+
+// ============================================================
+// g-footer--simple
+// ============================================================
+.g-footer--simple {
+  .g-footer__outlink,
+  .g-footer__logo,
+  .contact,
+  .g-footer__sns,
+  .ico--mark-isms {
+    display: none;
+  }
+
+  .corp {
+    position: relative;
+    padding-bottom: 48px;
+    margin-bottom: 32px;
+  }
+  .corp::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: token.$gray-500;
+  }
+
+  .dropdown {
+    .menu-button {
+      color: token.$gray-300;
+    }
+
+    &__content {
+      inset: auto auto calc(100% + 2px) 0;
+      transform: translate(0);
+    }
+  } // dropdown
+
+  .g-footer__bottom {
+    border-top-width: 0;
+    padding-top: 18px;
+  }
+
+  @include abstract.media-bp-up('ex') {
+    .corp {
+      text-align: center;
+    }
+
+    .dropdown {
+      @include abstract.absolute($bottom: -55px, $right: 0);
+      z-index: 5;
+
+      &__content {
+        inset: auto 0 calc(100% + 2px) auto;
+      }
+    }
+
+    .g-footer__bottom {
+      padding-top: 0;
+    }
+  } // ex
+}
+
+// ==============================
+// btn-top
+// ==============================
+.btn-top {
+  $position: 40px;
+  $size: 56px;
+  @include abstract.fixed($bottom: $position, $right: $position);
+
+  padding: 0;
+  width: $size;
+  height: $size;
+  background-color: token.$base-white;
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid token.$gray-200;
+  cursor: pointer;
+
+  &.is-fixed {
+    @include abstract.absolute($top: calc(($size + $position) * -1), $right: $position);
+  }
+}

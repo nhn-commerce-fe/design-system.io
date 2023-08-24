@@ -1,0 +1,79 @@
+@use '../base/token';
+@use '../abstract';
+
+.testimonial-section {
+  // @include abstract.debug();
+  $this: &;
+  color: token.$gray-700;
+
+  &__content {
+    margin-bottom: 24px;
+  }
+
+  .star-rating {
+    margin-bottom: 24px;
+  }
+
+  blockquote {
+    margin-bottom: 32px;
+    font-size: abstract.rem(token.$font-size-4);
+    font-weight: token.$font-weights-commerce-sans-1;
+  }
+
+  em {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: token.$font-weights-commerce-sans-2;
+  }
+
+  cite {
+    display: block;
+  }
+
+  cite span {
+    font-size: abstract.rem(token.$font-size-1);
+    font-weight: token.$font-weights-commerce-sans-0;
+    color: token.$gray-500;
+  }
+
+  &__carousel {
+    // @include abstract.absolute();
+    margin-bottom: 48px;
+
+    .carousel-arrow:last-of-type {
+      margin-left: 16px;
+    }
+  }
+
+  &__img {
+    border-radius: 16px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  @include abstract.media-bp-up('md') {
+    display: flex;
+    justify-content: space-between;
+
+    &__slide {
+      display: flex !important;
+      align-items: center;
+      justify-content: space-between;
+      gap: 64px;
+    } // slide
+
+    &__carousel {
+      @include abstract.relative();
+
+      z-index: 5;
+      flex: none;
+      display: flex;
+      align-items: end;
+      transform: translateX(-110px);
+      margin-bottom: 0;
+    }
+  } // md
+}

@@ -1,0 +1,42 @@
+@use '../base/token';
+@use '../abstract';
+@use '../sprite';
+
+.dropdown {
+  $this: &;
+
+  @include abstract.relative();
+
+  display: inline-block;
+
+  &__content {
+    @include abstract.absolute($top: 100%, $right: 50%);
+
+    padding: 12px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    min-width: 115px;
+    transform: translateX(50%);
+    background-color: #fff;
+    box-shadow: token.$shadow-lg;
+    border: 1px solid token.$gray-100;
+    border-radius: 12px;
+    font-weight: token.$font-weights-commerce-sans-2;
+  } // content
+
+  :not(.is-open) ~ #{&}__menu {
+    display: none;
+  }
+
+  &__link {
+    display: flex;
+    padding: 12px;
+    justify-content: space-between;
+    border-radius: 8px;
+
+    &:hover {
+      background-color: token.$gray-50;
+    }
+  } // link
+}

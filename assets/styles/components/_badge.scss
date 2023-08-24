@@ -1,0 +1,170 @@
+@use '../base/token';
+@use '../base/font';
+@use '../abstract';
+
+$colors: (
+  'gray': (
+    color: token.$gray-600,
+    border: token.$gray-200,
+    bg: token.$gray-50
+  ),
+  'error': (
+    color: token.$primary-red-600,
+    border: token.$primary-red-200,
+    bg: token.$primary-red-50
+  ),
+  'warning': (
+    color: token.$orange-600,
+    border: token.$orange-200,
+    bg: token.$orange-50
+  ),
+  'success': (
+    color: token.$green-600,
+    border: token.$green-200,
+    bg: token.$green-50
+  ),
+  'pink': (
+    color: token.$pink-600,
+    border: token.$pink-200,
+    bg: token.$pink-50
+  ),
+  'info': (
+    color: token.$blue-600,
+    border: token.$blue-200,
+    bg: token.$blue-50
+  ),
+  'yellow': (
+    color: token.$yellow-600,
+    border: token.$yellow-200,
+    bg: token.$yellow-50
+  ),
+  'violet': (
+    color: token.$violet-600,
+    border: token.$violet-200,
+    bg: token.$violet-50
+  )
+);
+
+$badge-size: (
+  'sm': (
+    'font': abstract.rem(12px),
+    'padding': 0 10px,
+    'height': 22px
+  ),
+  'md': (
+    'font': abstract.rem(14px),
+    'padding': 0 10px,
+    'heigh': 25px
+  ),
+  'lg': (
+    'font': abstract.rem(14px),
+    'padding': 4px 10px,
+    'height': 29px
+  )
+);
+
+$types: ('pill', 'badge');
+
+.badge {
+  $this: &;
+  display: inline-flex;
+  align-items: center;
+  overflow: hidden;
+  gap: 3px;
+  font-weight: map-get(font.$font-info, token.$font-weights-commerce-sans-1);
+
+  @each $name, $info in $colors {
+    &--#{$name} {
+      color: map-get($info, 'color');
+      background-color: map-get($info, 'bg');
+      border: 1px solid map-get($info, 'border');
+    }
+  } // color each
+
+  @each $size, $info in $badge-size {
+    &--#{$size} {
+      height: map-get($info, 'height');
+      font-size: map-get($info, 'font');
+      padding: map-get($info, 'padding');
+
+      @if $size == 'sm' {
+        #{$this}__label {
+          transform: translateY(1px);
+        }
+      }
+    }
+  } // sizes each
+
+  @each $type, $value in $types {
+    &--#{$type} {
+      border-radius: if($type == 'pill', 16px, 6px);
+    }
+  } //$types each
+
+  &--outline {
+    background-color: token.$base-white;
+  }
+
+  &--dot {
+    $dot-size: 6px;
+
+    &::before {
+      content: '';
+      width: $dot-size;
+      height: $dot-size;
+      background-color: currentColor;
+      border-radius: 50%;
+    }
+  } // badge--dot
+}
+
+// ================================
+// badge-group
+// ================================
+$group-size: (
+  'md': (
+    font: abstract.rem(token.$font-size-0),
+    gap: 8px
+  ),
+  'lg': (
+    font: abstract.rem(token.$font-size-2),
+    gap: 12px
+  )
+);
+
+.badge-group {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px 4px 4px;
+
+  @each $name, $info in $group-size {
+    &--#{$name} {
+      font-size: map-get($info, 'font');
+      gap: map-get($info, 'gap');
+    }
+  } // group-size each
+
+  @each $name, $info in $colors {
+    &--#{$name} {
+      color: map-get($info, 'color');
+      background-color: map-get($info, 'bg');
+      border: 1px solid map-get($info, 'border');
+    }
+  } // colors each
+
+  @each $name, $type in $types {
+    &--#{$name} {
+      border-radius: if($name == 'pill', 16px, 10px);
+    }
+  } // types each
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    span {
+      @include abstract.relative($top: 2px);
+    }
+  }
+}

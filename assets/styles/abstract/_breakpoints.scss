@@ -1,0 +1,75 @@
+@use 'sass:map';
+@use '../base/variable' as v;
+
+// ========================
+// @params: $name: string, $breakpoints: map
+// (xs, (xs: 0, sm: 576px, md: 768px)
+// @return null or px
+// ========================
+@function bp-min($name, $breakpoints: v.$grid-breakpoints) {
+  $min: map.get($breakpoints, $name);
+
+  @return if($min != 0, $min, null);
+}
+
+@function bp-max($name, $breakpoints: v.$grid-breakpoints) {
+  $max: map.get($breakpoints, $name);
+
+  @return if($max and $max != 0, $max - 1, null);
+}
+
+// ========================
+// @params: string, $breakpoints: map
+// (xs, (xs: 0, sm: 576px, md: 768px)
+// @return null or -sm
+// ========================
+@function bp-infix($name, $breakpoints: v.$grid-breakpoints) {
+  @return if(bp-min($name, $breakpoints), '-#{$name}', null);
+}
+
+@mixin media-bp-up($name, $breakpoints: v.$grid-breakpoints) {
+  $min: bp-min($name, $breakpoints);
+
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin media-bp-down($name, $breakpoints: v.$grid-breakpoints) {
+  $max: bp-max($name, $breakpoints);
+
+  @if $max {
+    @media (max-width: $max) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin media-bp-between($lower, $upper, $breakpoints: v.$grid-breakpoints) {
+  $min: bp-min($lower, $breakpoints);
+  $max: bp-max($upper, $breakpoints);
+
+  @if $min != null and $max != null {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  }
+
+  @if $max == null {
+    @include media-bp-up($min, $breakpoints) {
+      @content;
+    }
+  }
+
+  @if $min == null {
+    @include media-bp-down($max, $breakpoints) {
+      @content;
+    }
+  }
+}

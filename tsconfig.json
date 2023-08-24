@@ -1,0 +1,37 @@
+{
+  "extends": "tsconfig/nextjs.json",
+  "compilerOptions": {
+    "types": ["@types/layout", "@types/common"]
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.d.ts"],
+  "exclude": ["node_modules"]
+}
+// {
+//   "compilerOptions": {
+//     "target": "es5",
+//     "lib": ["dom", "dom.iterable", "esnext"],
+//     "allowJs": true,
+//     "skipLibCheck": true,
+//     "esModuleInterop": true,
+//     "allowSyntheticDefaultImports": true,
+//     "strict": true,
+//     "forceConsistentCasingInFileNames": true,
+//     "noFallthroughCasesInSwitch": true,
+//     "module": "esnext",
+//     "moduleResolution": "node",
+//     "resolveJsonModule": true,
+//     "isolatedModules": true,
+//     "noEmit": true,
+//     "jsx": "react-jsx",
+//     "baseUrl": "./",
+//     "typeRoots": ["types"],
+//     "paths": {
+//       "@components/*": ["./components/*"],
+//       "@layout/*": ["./layout/*"],
+//       "@style/*": ["./assets/styles/*"]
+//     }
+//   },
+//   "extends": "tsconfig/react-library.json",
+//   "include": [".", "src"],
+//   "exclude": ["dist", "build", "node_modules"]
+// }

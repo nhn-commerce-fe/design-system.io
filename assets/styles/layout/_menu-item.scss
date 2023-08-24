@@ -1,0 +1,45 @@
+@use '../abstract';
+@use '../base/token';
+
+.menu-item {
+  // @include abstract.debug();
+  display: block;
+  padding: 12px;
+  font-size: abstract.rem(token.$font-size-1);
+
+  &__top {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+  }
+
+  &__label {
+    color: token.$gray-700;
+    font-size: abstract.rem(token.$font-size-2);
+    font-weight: token.$font-weights-commerce-sans-2;
+  }
+
+  &__text {
+    font-weight: token.$font-weights-commerce-sans-0;
+    color: token.$gray-400;
+    margin-bottom: 12px;
+  }
+
+  &__more {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: token.$font-weights-commerce-sans-1;
+    color: token.$blue-500;
+  }
+
+  &:hover {
+    border-radius: 8px;
+    background-color: token.$gray-50;
+  }
+
+  & > *:last-child {
+    margin-bottom: 0;
+  }
+}

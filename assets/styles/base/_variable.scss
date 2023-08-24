@@ -1,0 +1,22 @@
+$img-loc: '../images';
+$img-each-loc: '#{$img-loc}/image-each';
+$sprite-loc: '#{$img-loc}/sprite.png';
+
+$font-face: 'CommerceSans';
+$reset-font-face: $font-face, sans-serif;
+$font-size: 16px;
+
+$grid-columns: 12;
+$gap-sm: 16px;
+$gap-ex: 24px;
+
+$max-width: 1280px;
+$max-width-hero: 1440px;
+
+$grid-breakpoints: (
+  'xs': 0,
+  'sm': 576px,
+  'md': 768px,
+  'lg': 992px,
+  'ex': 1280px
+) !default;

@@ -1,0 +1,32 @@
+@use '../sprite';
+@use '../abstract';
+
+$icons: (
+  sprite.$menu-01,
+  sprite.$x-close,
+  sprite.$arrow-narrow-right,
+  sprite.$arrow-narrow-up-right,
+  sprite.$dot-grid,
+  sprite.$mark-isms,
+  sprite.$minus-circle,
+  sprite.$plus-circle,
+  sprite.$ico-m-sm,
+  sprite.$message-smile-square,
+  sprite.$align-top-01
+);
+
+.ico {
+  @include abstract.bg2x-sprite();
+
+  display: inline-block;
+
+  &__focus {
+    cursor: pointer;
+  }
+
+  @each $sprite in $icons {
+    &--#{nth($sprite, 10)} {
+      @include abstract.sprite2x($sprite);
+    }
+  }
+}

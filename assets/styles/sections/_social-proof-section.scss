@@ -1,0 +1,42 @@
+@use '../abstract';
+@use '../base/token';
+
+.social-proof {
+  text-align: center;
+  color: token.$gray-400;
+  font-weight: 500;
+
+  &__tit {
+    margin-bottom: 37px;
+  }
+
+  &__list {
+    display: inline-flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px 12px;
+  }
+
+  &__item {
+    flex: none;
+    height: 26px;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  @include abstract.media-bp-up('md') {
+    &__tit {
+      margin-bottom: 39px;
+    }
+
+    &__list {
+      gap: 45px 47px;
+    }
+
+    &__item {
+      height: 42px;
+    }
+  }
+}

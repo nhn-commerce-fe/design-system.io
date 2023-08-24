@@ -1,0 +1,14 @@
+@use '../base/token';
+@use '../abstract';
+
+.menu-button {
+  $this: &;
+
+  &:hover {
+    background-color: token.$gray-50;
+  }
+
+  &.is-active .btn__label + svg {
+    transform: rotate(180deg);
+  }
+}

@@ -1,0 +1,64 @@
+@use '../base/token';
+@use '../abstract';
+
+$link-properties: (
+  'link-gray': (
+    'default': token.$gray-500,
+    'hover': token.$gray-700,
+    'disable': token.$gray-200
+  ),
+  'link-color': (
+    'default': token.$blue-500,
+    'hover': token.$blue-600,
+    'disable': token.$gray-200
+  )
+);
+
+$link-size: (
+  'sm': abstract.rem(token.$font-size-1),
+  'md': abstract.rem(token.$font-size-2),
+  'lg': abstract.rem(token.$font-size-3)
+);
+
+.link {
+  $this: &;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  @each $name, $info in $link-properties {
+    &--#{$name} {
+      color: map-get($info, 'default');
+
+      &:hover,
+      &:hover:not(.is-disable) {
+        color: map-get($info, 'hover');
+      }
+
+      &.is-disable {
+        color: map-get($info, 'disable');
+        pointer-events: none;
+        cursor: default;
+      }
+    }
+  } // each
+
+  @each $size, $value in $link-size {
+    &--#{$size} {
+      font-size: $value;
+    }
+  } // each
+
+  // lg 크기 아이콘 외에 size: 20
+  &__icon {
+    width: 20px;
+    height: 20px;
+
+    @at-root :where(#{$this}--lg) & {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

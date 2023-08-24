@@ -1,0 +1,13 @@
+@use '../abstract';
+
+.alternating-02-section {
+  padding: 64px 0;
+
+  .media:nth-child(n + 2) {
+    padding-top: 96px;
+  }
+
+  @include abstract.media-bp-up('md') {
+    padding: 96px 0;
+  }
+}

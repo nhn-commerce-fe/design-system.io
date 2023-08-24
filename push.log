@@ -1,0 +1,136 @@
+cd storybook-static
+==
+git init
+==
+git add .
+==
+git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   161528bb6c25115b3f83.png
+	new file:   187.eba82e03.iframe.bundle.js
+	new file:   187.eba82e03.iframe.bundle.js.LICENSE.txt
+	new file:   187.eba82e03.iframe.bundle.js.map
+	new file:   292.c7fd7744.iframe.bundle.js
+	new file:   292.c7fd7744.iframe.bundle.js.LICENSE.txt
+	new file:   292.c7fd7744.iframe.bundle.js.map
+	new file:   2dbc69731c3f9930a271.png
+	new file:   40.5248789e.iframe.bundle.js
+	new file:   440.92e62653.iframe.bundle.js
+	new file:   748.cd0e8fae.iframe.bundle.js
+	new file:   798.5ab4cf68.iframe.bundle.js
+	new file:   7a58d2cb9a6358f85e9b.png
+	new file:   815.b41e35cb.iframe.bundle.js
+	new file:   815.b41e35cb.iframe.bundle.js.map
+	new file:   889.41c9e3ab.iframe.bundle.js
+	new file:   922.0364909d.iframe.bundle.js
+	new file:   922.0364909d.iframe.bundle.js.map
+	new file:   929.4634b3ba.iframe.bundle.js
+	new file:   9335a1a91b80ad4fec70.png
+	new file:   998.f7e9412e.iframe.bundle.js
+	new file:   c720ced26387af8a9cb2.png
+	new file:   e93de094692245f1ec04.png
+	new file:   f7d8b9a8cec7528e0e36.png
+	new file:   favicon.svg
+	new file:   iframe.html
+	new file:   index.html
+	new file:   index.json
+	new file:   logo-commerce.png
+	new file:   main.a5189632.iframe.bundle.js
+	new file:   project.json
+	new file:   runtime~main.4172d651.iframe.bundle.js
+	new file:   sb-addons/essentials-actions-2/manager-bundle.js
+	new file:   sb-addons/essentials-actions-2/manager-bundle.js.LEGAL.txt
+	new file:   sb-addons/essentials-actions-2/manager-bundle.js.map
+	new file:   sb-addons/essentials-backgrounds-3/manager-bundle.js
+	new file:   sb-addons/essentials-backgrounds-3/manager-bundle.js.LEGAL.txt
+	new file:   sb-addons/essentials-backgrounds-3/manager-bundle.js.map
+	new file:   sb-addons/essentials-controls-1/manager-bundle.js
+	new file:   sb-addons/essentials-controls-1/manager-bundle.js.LEGAL.txt
+	new file:   sb-addons/essentials-controls-1/manager-bundle.js.map
+	new file:   sb-addons/essentials-measure-6/manager-bundle.js
+	new file:   sb-addons/essentials-measure-6/manager-bundle.js.LEGAL.txt
+	new file:   sb-addons/essentials-measure-6/manager-bundle.js.map
+	new file:   sb-addons/essentials-outline-7/manager-bundle.js
+	new file:   sb-addons/essentials-outline-7/manager-bundle.js.LEGAL.txt
+	new file:   sb-addons/essentials-outline-7/manager-bundle.js.map
+	new file:   sb-addons/essentials-toolbars-5/manager-bundle.js
+	new file:   sb-addons/essentials-toolbars-5/manager-bundle.js.LEGAL.txt
+	new file:   sb-addons/essentials-toolbars-5/manager-bundle.js.map
+	new file:   sb-addons/essentials-viewport-4/manager-bundle.js
+	new file:   sb-addons/essentials-viewport-4/manager-bundle.js.LEGAL.txt
+	new file:   sb-addons/essentials-viewport-4/manager-bundle.js.map
+	new file:   sb-addons/interactions-9/manager-bundle.js
+	new file:   sb-addons/interactions-9/manager-bundle.js.LEGAL.txt
+	new file:   sb-addons/interactions-9/manager-bundle.js.map
+	new file:   sb-addons/links-0/manager-bundle.js
+	new file:   sb-addons/links-0/manager-bundle.js.LEGAL.txt
+	new file:   sb-addons/links-0/manager-bundle.js.map
+	new file:   sb-addons/onboarding-8/manager-bundle.js
+	new file:   sb-addons/onboarding-8/manager-bundle.js.LEGAL.txt
+	new file:   sb-addons/onboarding-8/manager-bundle.js.map
+	new file:   sb-addons/storybook-10/manager-bundle.js
+	new file:   sb-addons/storybook-10/manager-bundle.js.LEGAL.txt
+	new file:   sb-addons/storybook-10/manager-bundle.js.map
+	new file:   sb-common-assets/fonts.css
+	new file:   sb-common-assets/nunito-sans-bold-italic.woff2
+	new file:   sb-common-assets/nunito-sans-bold.woff2
+	new file:   sb-common-assets/nunito-sans-italic.woff2
+	new file:   sb-common-assets/nunito-sans-regular.woff2
+	new file:   sb-manager/GlobalScrollAreaStyles-4LLX2B3H-4X3KMH5M.js
+	new file:   sb-manager/OverlayScrollbars-OL4C4TVX-CEKT2V4K.js
+	new file:   sb-manager/WithTooltip-YBG737T3-I4RKVAH5.js
+	new file:   sb-manager/chunk-3J6GS6FI.js
+	new file:   sb-manager/chunk-JMPBYCHU.js
+	new file:   sb-manager/chunk-QHBOEFOL.js
+	new file:   sb-manager/chunk-QMHPSTMR.js
+	new file:   sb-manager/chunk-RKFFWI2D.js
+	new file:   sb-manager/chunk-SPUAGIB2.js
+	new file:   sb-manager/chunk-YENCPRB4.js
+	new file:   sb-manager/chunk-YQDZW3DF.js
+	new file:   sb-manager/formatter-ZNWCFYAW-7B3BHX32.js
+	new file:   sb-manager/globals.js
+	new file:   sb-manager/index.js
+	new file:   sb-manager/runtime.js
+	new file:   sb-manager/syntaxhighlighter-4OVWVELQ-YLWIEEMY.js
+	new file:   sb-preview/globals.js
+	new file:   sb-preview/runtime.js
+	new file:   static/css/stories-Button-stories.b8f0e908.chunk.css
+	new file:   static/css/stories-Button-stories.b8f0e908.chunk.css.map
+	new file:   static/css/stories-Header-stories.d60d34aa.chunk.css
+	new file:   static/css/stories-Header-stories.d60d34aa.chunk.css.map
+	new file:   static/css/stories-Page-stories.a76d5758.chunk.css
+	new file:   static/css/stories-Page-stories.a76d5758.chunk.css.map
+	new file:   static/media/discord.bd319a533c65438b56007d289ff12ddd.svg
+	new file:   static/media/github.0366d3dfd1fd4c4d82b7b53486f11763.svg
+	new file:   static/media/tutorials.dc623e0dfe3ce822c631eec5718f6bfc.svg
+	new file:   static/media/youtube.9ab9c849378b2a4a74e1b6a6d0cf70cf.svg
+	new file:   stories-Button-stories.bccc4478.iframe.bundle.js
+	new file:   stories-Button-stories.bccc4478.iframe.bundle.js.LICENSE.txt
+	new file:   stories-Configure-mdx.cca1bcd2.iframe.bundle.js
+	new file:   stories-Configure-mdx.cca1bcd2.iframe.bundle.js.LICENSE.txt
+	new file:   stories-Header-stories.c679acfb.iframe.bundle.js
+	new file:   stories-Header-stories.c679acfb.iframe.bundle.js.LICENSE.txt
+	new file:   stories-Page-stories.8aaa7d35.iframe.bundle.js
+	new file:   stories.json
+==
+git commit -m Thu Aug  3 11:59:42 KST 2023 commit
+==
+remote origin add
+git push -f
+To https://github.com/nhn-commerce-fe/design-system
+ + e8576a4...a279f23 master -> gh-pages (forced update)
+git push ERROR please check /Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/push.log
+==
+cd ..
+==
+delete storybook-static
+cd storybook-static
+==
+git init
+==
+git add .

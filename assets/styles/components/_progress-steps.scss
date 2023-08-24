@@ -1,0 +1,62 @@
+@use '../base/token';
+@use '../abstract';
+
+.progress-steps {
+  &__item:last-child {
+    .step__icon-wrap::after {
+      content: none;
+    }
+  } // item
+
+  @include abstract.media-bp-up('md') {
+    display: flex;
+    justify-content: center;
+    max-width: 992px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &__item {
+      flex: 1;
+    }
+
+    .step {
+      flex-direction: column;
+      text-align: center;
+
+      &__icon-wrap {
+        @include abstract.relative();
+
+        &::before,
+        &::after {
+          @include abstract.absolute($top: 50%);
+          content: '';
+
+          width: 50%;
+          transform: translateY(-50%);
+          height: 2px;
+          background-color: token.$gray-400;
+          border: 0;
+        } // before, after
+
+        &::before {
+          left: 0;
+        }
+
+        &::after {
+          right: 0;
+        }
+      }
+
+      &__icon {
+        @include abstract.relative();
+
+        box-shadow: none;
+        z-index: 5;
+      } // icon
+    } //step
+
+    &__item:first-child .step__icon-wrap::before {
+      content: none;
+    }
+  } // md
+}

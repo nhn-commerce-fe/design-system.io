@@ -1,0 +1,50 @@
+@use '../abstract';
+@use '../base/token';
+
+.cta-section {
+  padding: 64px 16px;
+  text-align: center;
+  background-color: token.$secondary-gray-blue-700;
+  color: token.$base-white;
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: abstract.rem(36px);
+    font-weight: token.$font-weights-commerce-sans-2;
+  } // title
+
+  &__desc {
+    margin-bottom: 40px;
+    font-size: abstract.rem(token.$font-size-4);
+    font-weight: token.$font-weights-commerce-sans-0;
+    color: token.$secondary-gray-blue-100;
+  } // desc
+
+  &__content {
+    .btn {
+      width: 100%;
+
+      &:nth-child(n + 2) {
+        margin-top: 12px;
+      }
+    }
+  }
+
+  & > *:last-child {
+    margin-bottom: 0;
+  }
+
+  @include abstract.media-bp-up('md') {
+    padding: 96px 0;
+
+    &__content {
+      .btn {
+        width: auto;
+
+        &:nth-child(n + 2) {
+          margin-left: 12px;
+        }
+      }
+    } // content
+  }
+}

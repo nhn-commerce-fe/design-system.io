@@ -1,0 +1,15 @@
+@use '../base/variable' as v;
+@use './breakpoints' as bp;
+
+@mixin make-css-grid($columns: v.$grid-columns, $breakpoints: v.$grid-breakpoints) {
+  @each $name, $value in $breakpoints {
+    $infix: bp.bp-infix($name, $breakpoints);
+    @include bp.media-bp-up($name, $breakpoints) {
+      @for $i from 1 through $columns {
+        .col#{$infix}-#{$i} {
+          grid-column: auto / span $i;
+        }
+      }
+    }
+  }
+}

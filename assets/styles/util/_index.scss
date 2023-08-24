@@ -1,0 +1,9 @@
+@use '../abstract';
+
+.a11y {
+  @include abstract.a11y;
+}
+
+.bold {
+  font-weight: bold;
+}

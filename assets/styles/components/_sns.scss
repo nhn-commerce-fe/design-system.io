@@ -1,0 +1,26 @@
+@use '../abstract';
+@use '../sprite';
+
+$ico: (
+  'twitter': sprite.$ico-twitter,
+  'linkedin': sprite.$ico-linkedin,
+  'facebook': sprite.$ico-facebook,
+  'github': sprite.$ico-github,
+  'angellist': sprite.$ico-angellist,
+  'dribble': sprite.$ico-dribble,
+  'naver': sprite.$ico-naver,
+  'youtube': sprite.$ico-youtube,
+  'instagram': sprite.$ico-instagram,
+);
+
+.sns {
+  @include abstract.bg2x-sprite();
+
+  display: inline-block;
+
+  @each $name, $info in $ico {
+    &--#{$name} {
+      @include abstract.sprite2x($info);
+    }
+  }
+}

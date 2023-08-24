@@ -1,0 +1,63 @@
+@use '../base/token';
+@use '../abstract';
+@use '../sprite';
+
+.qna {
+  $this: &;
+
+  padding-bottom: 18px;
+  margin: 24px 0;
+  border-bottom: 1px solid token.$gray-200;
+
+  &__tit {
+    @include abstract.relative();
+
+    font-size: abstract.rem(token.$font-size-3);
+    font-weight: token.$font-weights-commerce-sans-1;
+    color: token.$gray-700;
+
+    button {
+      display: block;
+      width: 100%;
+      padding-right: 48px;
+      cursor: pointer;
+
+      &::before {
+        content: 'Q. ';
+      }
+    }
+
+    &::after {
+      @include abstract.absolute($top: 50%, $right: 0);
+      @include abstract.bg2x-sprite();
+      @include abstract.sprite2x(sprite.$minus-circle);
+
+      content: '';
+      transform: translateY(-50%);
+      width: 24px;
+      height: 24px;
+    }
+  } // tit
+
+  &__answer {
+    margin-top: 8px;
+    color: token.$gray-600;
+    font-weight: token.$font-weights-commerce-sans-0;
+
+    a {
+      color: #006aff;
+    }
+
+    @at-root #{$this}:not(.is-active) & {
+      display: none;
+    }
+  } // answer
+
+  &.is-active {
+    padding-bottom: 32px;
+
+    #{$this}__tit::after {
+      @include abstract.sprite2x(sprite.$plus-circle);
+    }
+  }
+}

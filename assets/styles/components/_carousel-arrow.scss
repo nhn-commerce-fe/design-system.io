@@ -1,0 +1,38 @@
+@use '../base/token';
+@use '../abstract';
+
+$carousel-size: ('md', 'lg');
+
+.carousel-arrow {
+  $this: &;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  @each $size in $carousel-size {
+    &--#{$size} {
+      width: if($size == 'md', 48px, 56px);
+      height: if($size == 'md', 48px, 56px);
+    } // size
+  } // each
+
+  &--left {
+    transform: rotate(180deg);
+  }
+
+  @at-root &:not(#{$this}--arrow) {
+    border-radius: 50%;
+    border: 1px solid token.$gray-200;
+    background-color: token.$base-white;
+
+    &:hover {
+      background-color: token.$gray-50;
+      border-color: token.$gray-300;
+    }
+
+    &:disabled {
+      background-color: token.$base-white;
+      border-color: token.$gray-50;
+    }
+  } // not arrow
+}

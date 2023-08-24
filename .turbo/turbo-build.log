@@ -1,0 +1,51 @@
+$ webpack --node-env production
+assets by path images/image-each/*.png 57 KiB
+  asset images/image-each/mark-isms.png 11.8 KiB [emitted] [from: assets/images/image-each/mark-isms.png] [copied]
+  asset images/image-each/logo-m.png 3.68 KiB [emitted] [from: assets/images/image-each/logo-m.png] [copied]
+  + 31 assets
+assets by status 1 MiB [big]
+  asset hero-image.png 381 KiB [emitted] [from: assets/images/temp/hero-image.png] [big] (auxiliary name: main)
+  asset images/temp/hero-image.png 381 KiB [emitted] [from: assets/images/temp/hero-image.png] [copied] [big]
+  asset main.f9454b7c34e328824c52.bundle.js 266 KiB [emitted] [immutable] [minimized] [big] (name: main) 1 related asset
+assets by path images/*.png 135 KiB
+  asset images/sprite.png 68.5 KiB [emitted] [from: assets/images/sprite.png] [copied]
+  asset images/screen-mockup.png 66.8 KiB [emitted] [from: assets/images/screen-mockup.png] [copied]
++ 5 assets
+Entrypoint main [big] 301 KiB (451 KiB) = main.css 34.5 KiB main.f9454b7c34e328824c52.bundle.js 266 KiB 2 auxiliary assets
+orphan modules 454 KiB (javascript) 68.5 KiB (asset) 1.11 KiB (runtime) [orphan] 84 modules
+runtime modules 1.82 KiB 5 modules
+cacheable modules 547 KiB (javascript) 34.9 KiB (css/mini-extract)
+  modules by path ../../node_modules/ 144 KiB
+    modules by path ../../node_modules/react/ 7.98 KiB 4 modules
+    modules by path ../../node_modules/react-dom/ 131 KiB
+      ../../node_modules/react-dom/client.js 619 bytes [built] [code generated]
+      + 2 modules
+    modules by path ../../node_modules/scheduler/ 4.33 KiB
+      ../../node_modules/scheduler/index.js 198 bytes [built] [code generated]
+      ../../node_modules/scheduler/cjs/scheduler.production.min.js 4.14 KiB [built] [code generated]
+    ../../node_modules/classnames/index.js 1.38 KiB [built] [code generated]
+  modules by path ./ 403 KiB (javascript) 34.9 KiB (css/mini-extract)
+    ./index.tsx + 67 modules 403 KiB [built] [code generated]
+    css ../../node_modules/css-loader/dist/cjs.js!../../node_modules/esbuild-loader/dist/index.cjs??ruleSet[1].rules[2].use[2]!../../node_modules/sass-loader/dist/cjs.js!./assets/styles/style.scss 34.9 KiB [built] [code generated]
+
+DEBUG LOG from ../../node_modules/sass-loader/dist/cjs.js sass-loader ../../node_modules/css-loader/dist/cjs.js!../../node_modules/esbuild-loader/dist/index.cjs??ruleSet[1].rules[2].use[2]!../../node_modules/sass-loader/dist/cjs.js!./assets/styles/style.scss
+    [debug:80:8] (.media--reverse .media__content,)
+
+WARNING in asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+This can impact web performance.
+Assets: 
+  hero-image.png (381 KiB)
+  main.f9454b7c34e328824c52.bundle.js (266 KiB)
+  images/temp/hero-image.png (381 KiB)
+
+WARNING in entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+Entrypoints:
+  main (301 KiB)
+      main.css
+      main.f9454b7c34e328824c52.bundle.js
+
+WARNING in webpack performance recommendations: 
+You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+For more info visit https://webpack.js.org/guides/code-splitting/
+
+webpack 5.88.2 compiled with 3 warnings in 12028 ms

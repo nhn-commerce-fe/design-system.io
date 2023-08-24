@@ -1,0 +1,18 @@
+@use 'sass:math';
+@use '../base/variable' as v;
+
+@function em($size, $font-size: v.$font-size) {
+  @return unquote(calc(math.div($size, $font-size)) + 'em');
+}
+
+@function rem($size, $font-size: v.$font-size) {
+  @return math.div($size, $font-size) * 1rem;
+}
+
+@function percent($size, $font-size: v.$font-size) {
+  @return unquote(math.div($size, $font-size) * 100 + '%');
+}
+
+@function division($num1, $num2) {
+  @return math.div($num1, $num2);
+}

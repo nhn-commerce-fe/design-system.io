@@ -1,0 +1,85 @@
+@use '../base/token';
+@use '../abstract';
+
+// 8px 단위
+$sizes: (
+  'sm': (
+    32px,
+    6px
+  ),
+  'md': (
+    40px,
+    8px
+  ),
+  'lg': (
+    48px,
+    10px
+  ),
+  'xl': (
+    56px,
+    12px
+  )
+);
+
+$themes: (
+  'modern': (
+    'bg': token.$base-white,
+    'border': token.$gray-200
+  ),
+  'dark-square': (
+    'bg': token.$secondary-gray-blue-700,
+    'border': token.$secondary-gray-blue-700
+  ),
+  'neutral': (
+    'bg': token.$gray-100,
+    'border': token.$gray-100
+  ),
+  'info': (
+    'bg': token.$blue-100,
+    'border': token.$blue-100
+  ),
+  'error': (
+    'bg': token.$primary-red-100,
+    'border': token.$primary-red-100
+  ),
+  'warning': (
+    'bg': token.$orange-100,
+    'border': token.$orange-100
+  ),
+  'success': (
+    'bg': token.$green-100,
+    'border': token.$green-100
+  )
+);
+
+.feature-icon {
+  // @include abstract.debug();
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  @each $name, $size in $sizes {
+    &--#{$name} {
+      width: nth($size, 1);
+      height: nth($size, 1);
+      border-radius: nth($size, 2);
+    }
+  } // size each
+
+  @each $name, $info in $themes {
+    &--#{$name} {
+      border: 1px solid;
+      background-color: map-get($info, 'bg');
+      border-color: map-get($info, 'border');
+
+      @if ($name == 'modern') {
+        box-shadow: token.$shadow-xs;
+      }
+    }
+  } // theme each
+
+  &.is-circle {
+    border-radius: 50%;
+  }
+}

@@ -1,0 +1,246 @@
+@use '../base/variable' as v;
+@use '../base/token';
+@use '../abstract';
+@use '../sprite';
+
+.header {
+  // @include abstract.debug();
+  $this: &;
+  @include abstract.fixed($top: 0, $left: 0);
+
+  align-items: center;
+  width: 100%;
+  height: 72px;
+  overflow: hidden;
+  background-color: #fff;
+  z-index: 25;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+
+  &__left {
+    padding: 16px 0 0 16px;
+  }
+
+  :where(&__hamburger.btn) {
+    @include abstract.absolute($top: 16px, $right: 12px);
+
+    width: 40px;
+    height: 40px;
+    border: 0;
+    box-shadow: none;
+
+    .ico {
+      flex: none;
+    }
+  }
+
+  &__right {
+    padding: 24px 16px;
+  }
+
+  &__user {
+    &-btn-login {
+      margin-top: 12px;
+    }
+
+    &-pc {
+      display: none;
+    }
+
+    &-mobile > p {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+  } // header__uer-pc/mobile
+
+  .whole-menu__trigger {
+    display: none;
+  }
+
+  &.is-active {
+    height: 100vh;
+
+    #{$this}__left {
+      padding: 0;
+    }
+
+    #{$this}__logo {
+      padding: 16px 0 0 16px;
+      height: 72px;
+      box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    }
+
+    .gnb {
+      padding-left: 16px;
+      padding-bottom: 16px;
+    }
+  } // is active
+
+  &--simple .header__hamburger {
+    display: none;
+  }
+}
+
+.gnb {
+  overflow-y: auto;
+  margin-top: 24px;
+  padding-bottom: 24px;
+  padding-right: 16px;
+  height: calc(100vh - 244px);
+
+  &__link {
+    box-shadow: none;
+    width: 100%;
+    justify-content: start;
+  }
+
+  .dropdown {
+    display: block;
+
+    & > .btn {
+      justify-content: space-between;
+    }
+  }
+
+  .menu-button {
+    width: 100%;
+  }
+
+  .dropdown__content {
+    position: static;
+    padding: 12px 0;
+    width: 100%;
+    transform: translateX(0);
+    font-weight: token.$font-weights-commerce-sans-1;
+  }
+
+  .menu-item:hover {
+    border-radius: 0;
+  }
+}
+
+@include abstract.media-bp-up('ex') {
+  .header,
+  .header.is-active {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 32px;
+    height: 80px;
+    overflow: visible;
+  }
+
+  .header.is-active .header__logo {
+    padding: 0;
+  }
+
+  .header__left {
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
+
+  .gnb {
+    margin-top: 0;
+    margin-left: 40px;
+    padding-bottom: 0;
+    padding-right: 0;
+    height: auto;
+    overflow: visible;
+
+    &__list {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .gnb__item {
+    display: inline flex;
+
+    &:nth-child(n + 2) {
+      margin-left: 8px;
+    }
+  } // gnb__item
+
+  .gnb .dropdown {
+    &__content {
+      @include abstract.absolute();
+
+      transform: translateX(50%);
+      z-index: 5;
+    }
+
+    &__content {
+      padding: 12px;
+      width: -webkit-max-content;
+      width: -moz-max-content;
+      width: max-content;
+    }
+
+    .menu-item {
+      border-radius: 8px;
+    }
+  }
+
+  .gnb__item.is-active {
+    @include abstract.relative();
+
+    &::after {
+      @include abstract.absolute($top: calc(100% + 16px), $left: 0);
+      content: '';
+
+      width: 100%;
+      height: 2px;
+      background-color: token.$secondary-gray-blue-500;
+    }
+  }
+
+  .header__right {
+    display: flex;
+    align-items: center;
+    padding: 0;
+
+    .dropdown__content {
+      font-weight: token.$font-weights-commerce-sans-1;
+    }
+  }
+
+  .header__user {
+    &-login {
+      display: flex;
+
+      .is-full {
+        width: auto;
+      }
+    }
+
+    &-btn-login {
+      order: 1;
+      margin-top: 0;
+      margin-right: 12px;
+    }
+
+    &-btn-join {
+      order: 2;
+    }
+
+    &-mobile {
+      display: none;
+    }
+
+    &-pc {
+      display: block;
+
+      .dropdown li:nth-child(n + 2) {
+        margin-top: 13px;
+      }
+    }
+  } // header__user-pc/ mobile / login
+
+  .header .whole-menu__trigger {
+    display: inline-flex;
+  }
+
+  .header__hamburger {
+    display: none;
+  }
+} // ex

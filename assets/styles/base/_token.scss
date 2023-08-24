@@ -1,0 +1,154 @@
+$primary-red-50: #fffafd;
+$primary-red-100: #ffeaee;
+$primary-red-200: #fecbd2;
+$primary-red-300: #ff9fa5;
+$primary-red-400: #f86f76;
+$primary-red-450: #f7444e;
+$primary-red-500: #ec1d31;
+$primary-red-600: #dc0a2b;
+$primary-red-700: #a60013;
+$secondary-gray-blue-50: #f8f9fc;
+$secondary-gray-blue-100: #eaecf5;
+$secondary-gray-blue-200: #d5d9eb;
+$secondary-gray-blue-300: #b3b8db;
+$secondary-gray-blue-400: #717bbc;
+$secondary-gray-blue-450: #4e5ba6;
+$secondary-gray-blue-500: #3e4784;
+$secondary-gray-blue-600: #363f72;
+$secondary-gray-blue-700: #293056;
+$base-white: #ffffff;
+$base-black: #000000;
+$gray-50: #f6f7f9;
+$gray-100: #eaecf0;
+$gray-200: #d0d5dd;
+$gray-300: #98a2b3;
+$gray-400: #667085;
+$gray-500: #344054;
+$gray-600: #1d2939;
+$gray-700: #0c111d;
+$green-50: #f6fef9;
+$green-100: #d3f8df;
+$green-200: #aaf0c4;
+$green-300: #73e2a3;
+$green-400: #3ccb7f;
+$green-500: #099250;
+$green-600: #087443;
+$green-700: #095c37;
+$cyan-50: #f5feff;
+$cyan-100: #cff9fe;
+$cyan-200: #a5f0fc;
+$cyan-300: #67e3f9;
+$cyan-400: #22ccee;
+$cyan-500: #088ab2;
+$cyan-600: #0e7090;
+$cyan-700: #155b75;
+$blue-50: #f5faff;
+$blue-100: #e0efff;
+$blue-200: #b2ddff;
+$blue-300: #84caff;
+$blue-400: #53b1fd;
+$blue-500: #1570ef;
+$blue-600: #1849a9;
+$blue-700: #194185;
+$violet-50: #fbfaff;
+$violet-100: #ece9fe;
+$violet-200: #ddd6fe;
+$violet-300: #c3b5fd;
+$violet-400: #a48afb;
+$violet-500: #6927da;
+$violet-600: #5720b7;
+$violet-700: #3e1486;
+$pink-50: #fef6fb;
+$pink-100: #fce7f6;
+$pink-200: #fcceee;
+$pink-300: #faa7e0;
+$pink-400: #f670c7;
+$pink-500: #dd2590;
+$pink-600: #c11574;
+$pink-700: #851651;
+$orange-50: #fefaf5;
+$orange-100: #fdead7;
+$orange-200: #f9dbaf;
+$orange-300: #f7b27a;
+$orange-400: #f38744;
+$orange-500: #e4501e;
+$orange-600: #b93815;
+$orange-700: #772917;
+$yellow-50: #fefdf0;
+$yellow-100: #fef7c3;
+$yellow-200: #feee95;
+$yellow-300: #fde272;
+$yellow-400: #fac515;
+$yellow-500: #e89402;
+$yellow-600: #c27004;
+$yellow-700: #8b500a;
+$focus-ring-4px-primary-100: 0px 0px 0px 4px #ffeaee;
+$focus-ring-4px-primary-500: 0px 0px 0px 4px #9e77ed;
+$focus-ring-4px-gray-100: 0px 0px 0px 4px #f2f4f7;
+$focus-ring-4px-error-100: 0px 0px 0px 4px #fee4e2;
+$focus-ring-4px-gray-500: 0px 0px 0px 4px #667085;
+$shadow-xs: 0px 1px 2px 0px #1018280d;
+$shadow-xs-focused-4px-primary-color-100:
+  0px 1px 2px 0px #1018280d,
+  0px 0px 0px 4px #ffeaee;
+$shadow-xs-focused-4px-gray-100:
+  0px 1px 2px 0px #1018280d,
+  0px 0px 0px 4px #f2f4f7;
+$shadow-xs-focused-4px-error-100:
+  0px 1px 2px 0px #1018280d,
+  0px 0px 0px 4px #fee4e2;
+$shadow-sm:
+  0px 1px 3px 0px #1018281a,
+  0px 1px 2px 0px #1018280f;
+$shadow-sm-focused-4px-primary-100:
+  0px 1px 3px 0px #1018281a,
+  0px 1px 2px 0px #1018280f,
+  0px 0px 0px 4px #f4ebff;
+$shadow-sm-focused-4px-gray-100:
+  0px 1px 3px 0px #1018281a,
+  0px 1px 2px 0px #1018280f,
+  0px 0px 0px 4px #f2f4f7;
+$shadow-md:
+  0px 4px 8px -2px #1018281a,
+  0px 2px 4px -2px #1018280f;
+$shadow-lg:
+  0px 12px 16px -4px #10182814,
+  0px 4px 6px -2px #10182808;
+$shadow-xl:
+  0px 20px 24px -4px #10182814,
+  0px 8px 8px -4px #10182808;
+$shadow-2xl: 0px 24px 48px -12px #1018282e;
+$shadow-3xl: 0px 32px 64px -12px #10182824;
+$shadow-xs-focused-4px-primary-gray-100:
+  0px 1px 2px 0px #0000000d,
+  0px 0px 0px 4px #f2f4f7;
+$shadow-portfolio-mockup-main-centre-md: 0px 75px 150px 0px #34405424;
+$shadow-portfolio-mockup-main-centre-lg: 0px 100px 200px 0px #3440542e;
+$shadow-portfolio-mockup-overlay-right-lg: -100px 100px 150px 0px #3440541f;
+$shadow-portfolio-mockup-overlay-left-lg: 100px 100px 150px 0px #3440541f;
+$shadow-portfolio-mockup-grid-shadow-md: 32px 32px 64px 0px #34405414;
+$font-families-commerce-sans: Commerce Sans;
+$line-heights-0: 90;
+$line-heights-1: 75;
+$line-heights-2: 60;
+$line-heights-3: 45;
+$line-heights-4: 38;
+$line-heights-5: 30;
+$line-heights-6: 27;
+$line-heights-7: 24;
+$line-heights-8: 21;
+$line-heights-9: 18;
+$font-weights-commerce-sans-0: regular;
+$font-weights-commerce-sans-1: medium;
+$font-weights-commerce-sans-2: bold;
+$font-size-0: 12px;
+$font-size-1: 14px;
+$font-size-2: 16px;
+$font-size-3: 18px;
+$font-size-4: 20px;
+$font-size-5: 24px;
+$font-size-6: 30px;
+$font-size-7: 36px;
+$font-size-8: 48px;
+$font-size-9: 60px;
+$font-size-10: 72px;

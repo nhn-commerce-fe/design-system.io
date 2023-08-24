@@ -1,0 +1,508 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$align-top-01-name: 'align-top-01';
+$align-top-01-x: 125px;
+$align-top-01-y: 328px;
+$align-top-01-offset-x: -125px;
+$align-top-01-offset-y: -328px;
+$align-top-01-width: 48px;
+$align-top-01-height: 48px;
+$align-top-01-total-width: 558px;
+$align-top-01-total-height: 452px;
+$align-top-01-image: '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png';
+$align-top-01: (125px, 328px, -125px, -328px, 48px, 48px, 558px, 452px, '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png', 'align-top-01', );
+$arrow-narrow-right-name: 'arrow-narrow-right';
+$arrow-narrow-right-x: 490px;
+$arrow-narrow-right-y: 35px;
+$arrow-narrow-right-offset-x: -490px;
+$arrow-narrow-right-offset-y: -35px;
+$arrow-narrow-right-width: 40px;
+$arrow-narrow-right-height: 40px;
+$arrow-narrow-right-total-width: 558px;
+$arrow-narrow-right-total-height: 452px;
+$arrow-narrow-right-image: '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png';
+$arrow-narrow-right: (490px, 35px, -490px, -35px, 40px, 40px, 558px, 452px, '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png', 'arrow-narrow-right', );
+$arrow-narrow-up-right-name: 'arrow-narrow-up-right';
+$arrow-narrow-up-right-x: 173px;
+$arrow-narrow-up-right-y: 328px;
+$arrow-narrow-up-right-offset-x: -173px;
+$arrow-narrow-up-right-offset-y: -328px;
+$arrow-narrow-up-right-width: 48px;
+$arrow-narrow-up-right-height: 48px;
+$arrow-narrow-up-right-total-width: 558px;
+$arrow-narrow-up-right-total-height: 452px;
+$arrow-narrow-up-right-image: '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png';
+$arrow-narrow-up-right: (173px, 328px, -173px, -328px, 48px, 48px, 558px, 452px, '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png', 'arrow-narrow-up-right', );
+$chevron-down-name: 'chevron-down';
+$chevron-down-x: 490px;
+$chevron-down-y: 75px;
+$chevron-down-offset-x: -490px;
+$chevron-down-offset-y: -75px;
+$chevron-down-width: 40px;
+$chevron-down-height: 40px;
+$chevron-down-total-width: 558px;
+$chevron-down-total-height: 452px;
+$chevron-down-image: '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png';
+$chevron-down: (490px, 75px, -490px, -75px, 40px, 40px, 558px, 452px, '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png', 'chevron-down', );
+$chevron-up-name: 'chevron-up';
+$chevron-up-x: 120px;
+$chevron-up-y: 208px;
+$chevron-up-offset-x: -120px;
+$chevron-up-offset-y: -208px;
+$chevron-up-width: 40px;
+$chevron-up-height: 40px;
+$chevron-up-total-width: 558px;
+$chevron-up-total-height: 452px;
+$chevron-up-image: '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png';
+$chevron-up: (120px, 208px, -120px, -208px, 40px, 40px, 558px, 452px, '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png', 'chevron-up', );
+$close-menu-name: 'close-menu';
+$close-menu-x: 120px;
+$close-menu-y: 128px;
+$close-menu-offset-x: -120px;
+$close-menu-offset-y: -128px;
+$close-menu-width: 80px;
+$close-menu-height: 80px;
+$close-menu-total-width: 558px;
+$close-menu-total-height: 452px;
+$close-menu-image: '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png';
+$close-menu: (120px, 128px, -120px, -128px, 80px, 80px, 558px, 452px, '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png', 'close-menu', );
+$dot-grid-name: 'dot-grid';
+$dot-grid-x: 0px;
+$dot-grid-y: 248px;
+$dot-grid-offset-x: 0px;
+$dot-grid-offset-y: -248px;
+$dot-grid-width: 80px;
+$dot-grid-height: 80px;
+$dot-grid-total-width: 558px;
+$dot-grid-total-height: 452px;
+$dot-grid-image: '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png';
+$dot-grid: (0px, 248px, 0px, -248px, 80px, 80px, 558px, 452px, '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png', 'dot-grid', );
+$home-03-name: 'home-03';
+$home-03-x: 160px;
+$home-03-y: 208px;
+$home-03-offset-x: -160px;
+$home-03-offset-y: -208px;
+$home-03-width: 40px;
+$home-03-height: 40px;
+$home-03-total-width: 558px;
+$home-03-total-height: 452px;
+$home-03-image: '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png';
+$home-03: (160px, 208px, -160px, -208px, 40px, 40px, 558px, 452px, '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png', 'home-03', );
+$ico-angellist-name: 'ico-angellist';
+$ico-angellist-x: 221px;
+$ico-angellist-y: 328px;
+$ico-angellist-offset-x: -221px;
+$ico-angellist-offset-y: -328px;
+$ico-angellist-width: 48px;
+$ico-angellist-height: 48px;
+$ico-angellist-total-width: 558px;
+$ico-angellist-total-height: 452px;
+$ico-angellist-image: '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png';
+$ico-angellist: (221px, 328px, -221px, -328px, 48px, 48px, 558px, 452px, '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png', 'ico-angellist', );
+$ico-dribble-name: 'ico-dribble';
+$ico-dribble-x: 269px;
+$ico-dribble-y: 328px;
+$ico-dribble-offset-x: -269px;
+$ico-dribble-offset-y: -328px;
+$ico-dribble-width: 48px;
+$ico-dribble-height: 48px;
+$ico-dribble-total-width: 558px;
+$ico-dribble-total-height: 452px;
+$ico-dribble-image: '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png';
+$ico-dribble: (269px, 328px, -269px, -328px, 48px, 48px, 558px, 452px, '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png', 'ico-dribble', );
+$ico-facebook-name: 'ico-facebook';
+$ico-facebook-x: 317px;
+$ico-facebook-y: 328px;
+$ico-facebook-offset-x: -317px;
+$ico-facebook-offset-y: -328px;
+$ico-facebook-width: 48px;
+$ico-facebook-height: 48px;
+$ico-facebook-total-width: 558px;
+$ico-facebook-total-height: 452px;
+$ico-facebook-image: '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png';
+$ico-facebook: (317px, 328px, -317px, -328px, 48px, 48px, 558px, 452px, '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png', 'ico-facebook', );
+$ico-github-name: 'ico-github';
+$ico-github-x: 365px;
+$ico-github-y: 328px;
+$ico-github-offset-x: -365px;
+$ico-github-offset-y: -328px;
+$ico-github-width: 48px;
+$ico-github-height: 48px;
+$ico-github-total-width: 558px;
+$ico-github-total-height: 452px;
+$ico-github-image: '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png';
+$ico-github: (365px, 328px, -365px, -328px, 48px, 48px, 558px, 452px, '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png', 'ico-github', );
+$ico-instagram-name: 'ico-instagram';
+$ico-instagram-x: 413px;
+$ico-instagram-y: 328px;
+$ico-instagram-offset-x: -413px;
+$ico-instagram-offset-y: -328px;
+$ico-instagram-width: 48px;
+$ico-instagram-height: 48px;
+$ico-instagram-total-width: 558px;
+$ico-instagram-total-height: 452px;
+$ico-instagram-image: '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png';
+$ico-instagram: (413px, 328px, -413px, -328px, 48px, 48px, 558px, 452px, '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png', 'ico-instagram', );
+$ico-linkedin-name: 'ico-linkedin';
+$ico-linkedin-x: 461px;
+$ico-linkedin-y: 328px;
+$ico-linkedin-offset-x: -461px;
+$ico-linkedin-offset-y: -328px;
+$ico-linkedin-width: 48px;
+$ico-linkedin-height: 48px;
+$ico-linkedin-total-width: 558px;
+$ico-linkedin-total-height: 452px;
+$ico-linkedin-image: '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png';
+$ico-linkedin: (461px, 328px, -461px, -328px, 48px, 48px, 558px, 452px, '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png', 'ico-linkedin', );
+$ico-m-sm-name: 'ico-m-sm';
+$ico-m-sm-x: 200px;
+$ico-m-sm-y: 128px;
+$ico-m-sm-offset-x: -200px;
+$ico-m-sm-offset-y: -128px;
+$ico-m-sm-width: 49px;
+$ico-m-sm-height: 49px;
+$ico-m-sm-total-width: 558px;
+$ico-m-sm-total-height: 452px;
+$ico-m-sm-image: '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png';
+$ico-m-sm: (200px, 128px, -200px, -128px, 49px, 49px, 558px, 452px, '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png', 'ico-m-sm', );
+$ico-naver-name: 'ico-naver';
+$ico-naver-x: 509px;
+$ico-naver-y: 328px;
+$ico-naver-offset-x: -509px;
+$ico-naver-offset-y: -328px;
+$ico-naver-width: 48px;
+$ico-naver-height: 48px;
+$ico-naver-total-width: 558px;
+$ico-naver-total-height: 452px;
+$ico-naver-image: '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png';
+$ico-naver: (509px, 328px, -509px, -328px, 48px, 48px, 558px, 452px, '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png', 'ico-naver', );
+$ico-twitter-name: 'ico-twitter';
+$ico-twitter-x: 0px;
+$ico-twitter-y: 404px;
+$ico-twitter-offset-x: 0px;
+$ico-twitter-offset-y: -404px;
+$ico-twitter-width: 48px;
+$ico-twitter-height: 48px;
+$ico-twitter-total-width: 558px;
+$ico-twitter-total-height: 452px;
+$ico-twitter-image: '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png';
+$ico-twitter: (0px, 404px, 0px, -404px, 48px, 48px, 558px, 452px, '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png', 'ico-twitter', );
+$ico-youtube-name: 'ico-youtube';
+$ico-youtube-x: 48px;
+$ico-youtube-y: 404px;
+$ico-youtube-offset-x: -48px;
+$ico-youtube-offset-y: -404px;
+$ico-youtube-width: 48px;
+$ico-youtube-height: 48px;
+$ico-youtube-total-width: 558px;
+$ico-youtube-total-height: 452px;
+$ico-youtube-image: '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png';
+$ico-youtube: (48px, 404px, -48px, -404px, 48px, 48px, 558px, 452px, '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png', 'ico-youtube', );
+$logo-commerce-white-name: 'logo-commerce-white';
+$logo-commerce-white-x: 0px;
+$logo-commerce-white-y: 0px;
+$logo-commerce-white-offset-x: 0px;
+$logo-commerce-white-offset-y: 0px;
+$logo-commerce-white-width: 258px;
+$logo-commerce-white-height: 64px;
+$logo-commerce-white-total-width: 558px;
+$logo-commerce-white-total-height: 452px;
+$logo-commerce-white-image: '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png';
+$logo-commerce-white: (0px, 0px, 0px, 0px, 258px, 64px, 558px, 452px, '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png', 'logo-commerce-white', );
+$logo-commerce-name: 'logo-commerce';
+$logo-commerce-x: 0px;
+$logo-commerce-y: 64px;
+$logo-commerce-offset-x: 0px;
+$logo-commerce-offset-y: -64px;
+$logo-commerce-width: 258px;
+$logo-commerce-height: 64px;
+$logo-commerce-total-width: 558px;
+$logo-commerce-total-height: 452px;
+$logo-commerce-image: '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png';
+$logo-commerce: (0px, 64px, 0px, -64px, 258px, 64px, 558px, 452px, '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png', 'logo-commerce', );
+$logo-m-name: 'logo-m';
+$logo-m-x: 0px;
+$logo-m-y: 328px;
+$logo-m-offset-x: 0px;
+$logo-m-offset-y: -328px;
+$logo-m-width: 76px;
+$logo-m-height: 76px;
+$logo-m-total-width: 558px;
+$logo-m-total-height: 452px;
+$logo-m-image: '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png';
+$logo-m: (0px, 328px, 0px, -328px, 76px, 76px, 558px, 452px, '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png', 'logo-m', );
+$logo-plusshop-name: 'logo-plusshop';
+$logo-plusshop-x: 413px;
+$logo-plusshop-y: 191px;
+$logo-plusshop-offset-x: -413px;
+$logo-plusshop-offset-y: -191px;
+$logo-plusshop-width: 141px;
+$logo-plusshop-height: 37px;
+$logo-plusshop-total-width: 558px;
+$logo-plusshop-total-height: 452px;
+$logo-plusshop-image: '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png';
+$logo-plusshop: (413px, 191px, -413px, -191px, 141px, 37px, 558px, 452px, '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png', 'logo-plusshop', );
+$logo-shopby-name: 'logo-shopby';
+$logo-shopby-x: 160px;
+$logo-shopby-y: 248px;
+$logo-shopby-offset-x: -160px;
+$logo-shopby-offset-y: -248px;
+$logo-shopby-width: 147px;
+$logo-shopby-height: 40px;
+$logo-shopby-total-width: 558px;
+$logo-shopby-total-height: 452px;
+$logo-shopby-image: '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png';
+$logo-shopby: (160px, 248px, -160px, -248px, 147px, 40px, 558px, 452px, '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png', 'logo-shopby', );
+$logo-store-name: 'logo-store';
+$logo-store-x: 420px;
+$logo-store-y: 147px;
+$logo-store-offset-x: -420px;
+$logo-store-offset-y: -147px;
+$logo-store-width: 138px;
+$logo-store-height: 32px;
+$logo-store-total-width: 558px;
+$logo-store-total-height: 452px;
+$logo-store-image: '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png';
+$logo-store: (420px, 147px, -420px, -147px, 138px, 32px, 558px, 452px, '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png', 'logo-store', );
+$logo-workspace-name: 'logo-workspace';
+$logo-workspace-x: 258px;
+$logo-workspace-y: 115px;
+$logo-workspace-offset-x: -258px;
+$logo-workspace-offset-y: -115px;
+$logo-workspace-width: 273px;
+$logo-workspace-height: 32px;
+$logo-workspace-total-width: 558px;
+$logo-workspace-total-height: 452px;
+$logo-workspace-image: '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png';
+$logo-workspace: (258px, 115px, -258px, -115px, 273px, 32px, 558px, 452px, '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png', 'logo-workspace', );
+$m-logo-plusshop-name: 'm-logo-plusshop';
+$m-logo-plusshop-x: 258px;
+$m-logo-plusshop-y: 191px;
+$m-logo-plusshop-offset-x: -258px;
+$m-logo-plusshop-offset-y: -191px;
+$m-logo-plusshop-width: 155px;
+$m-logo-plusshop-height: 40px;
+$m-logo-plusshop-total-width: 558px;
+$m-logo-plusshop-total-height: 452px;
+$m-logo-plusshop-image: '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png';
+$m-logo-plusshop: (258px, 191px, -258px, -191px, 155px, 40px, 558px, 452px, '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png', 'm-logo-plusshop', );
+$m-logo-shopby-name: 'm-logo-shopby';
+$m-logo-shopby-x: 258px;
+$m-logo-shopby-y: 147px;
+$m-logo-shopby-offset-x: -258px;
+$m-logo-shopby-offset-y: -147px;
+$m-logo-shopby-width: 162px;
+$m-logo-shopby-height: 44px;
+$m-logo-shopby-total-width: 558px;
+$m-logo-shopby-total-height: 452px;
+$m-logo-shopby-image: '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png';
+$m-logo-shopby: (258px, 147px, -258px, -147px, 162px, 44px, 558px, 452px, '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png', 'm-logo-shopby', );
+$m-logo-store-name: 'm-logo-store';
+$m-logo-store-x: 307px;
+$m-logo-store-y: 248px;
+$m-logo-store-offset-x: -307px;
+$m-logo-store-offset-y: -248px;
+$m-logo-store-width: 152px;
+$m-logo-store-height: 35px;
+$m-logo-store-total-width: 558px;
+$m-logo-store-total-height: 452px;
+$m-logo-store-image: '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png';
+$m-logo-store: (307px, 248px, -307px, -248px, 152px, 35px, 558px, 452px, '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png', 'm-logo-store', );
+$m-logo-workspace-name: 'm-logo-workspace';
+$m-logo-workspace-x: 258px;
+$m-logo-workspace-y: 0px;
+$m-logo-workspace-offset-x: -258px;
+$m-logo-workspace-offset-y: 0px;
+$m-logo-workspace-width: 300px;
+$m-logo-workspace-height: 35px;
+$m-logo-workspace-total-width: 558px;
+$m-logo-workspace-total-height: 452px;
+$m-logo-workspace-image: '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png';
+$m-logo-workspace: (258px, 0px, -258px, 0px, 300px, 35px, 558px, 452px, '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png', 'm-logo-workspace', );
+$mark-isms-name: 'mark-isms';
+$mark-isms-x: 0px;
+$mark-isms-y: 128px;
+$mark-isms-offset-x: 0px;
+$mark-isms-offset-y: -128px;
+$mark-isms-width: 120px;
+$mark-isms-height: 120px;
+$mark-isms-total-width: 558px;
+$mark-isms-total-height: 452px;
+$mark-isms-image: '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png';
+$mark-isms: (0px, 128px, 0px, -128px, 120px, 120px, 558px, 452px, '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png', 'mark-isms', );
+$menu-01-name: 'menu-01';
+$menu-01-x: 80px;
+$menu-01-y: 248px;
+$menu-01-offset-x: -80px;
+$menu-01-offset-y: -248px;
+$menu-01-width: 80px;
+$menu-01-height: 80px;
+$menu-01-total-width: 558px;
+$menu-01-total-height: 452px;
+$menu-01-image: '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png';
+$menu-01: (80px, 248px, -80px, -248px, 80px, 80px, 558px, 452px, '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png', 'menu-01', );
+$message-smile-circle-name: 'message-smile-circle';
+$message-smile-circle-x: 200px;
+$message-smile-circle-y: 208px;
+$message-smile-circle-offset-x: -200px;
+$message-smile-circle-offset-y: -208px;
+$message-smile-circle-width: 40px;
+$message-smile-circle-height: 40px;
+$message-smile-circle-total-width: 558px;
+$message-smile-circle-total-height: 452px;
+$message-smile-circle-image: '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png';
+$message-smile-circle: (200px, 208px, -200px, -208px, 40px, 40px, 558px, 452px, '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png', 'message-smile-circle', );
+$message-smile-square-name: 'message-smile-square';
+$message-smile-square-x: 76px;
+$message-smile-square-y: 328px;
+$message-smile-square-offset-x: -76px;
+$message-smile-square-offset-y: -328px;
+$message-smile-square-width: 49px;
+$message-smile-square-height: 48px;
+$message-smile-square-total-width: 558px;
+$message-smile-square-total-height: 452px;
+$message-smile-square-image: '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png';
+$message-smile-square: (76px, 328px, -76px, -328px, 49px, 48px, 558px, 452px, '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png', 'message-smile-square', );
+$minus-circle-name: 'minus-circle';
+$minus-circle-x: 96px;
+$minus-circle-y: 404px;
+$minus-circle-offset-x: -96px;
+$minus-circle-offset-y: -404px;
+$minus-circle-width: 48px;
+$minus-circle-height: 48px;
+$minus-circle-total-width: 558px;
+$minus-circle-total-height: 452px;
+$minus-circle-image: '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png';
+$minus-circle: (96px, 404px, -96px, -404px, 48px, 48px, 558px, 452px, '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png', 'minus-circle', );
+$plus-circle-name: 'plus-circle';
+$plus-circle-x: 144px;
+$plus-circle-y: 404px;
+$plus-circle-offset-x: -144px;
+$plus-circle-offset-y: -404px;
+$plus-circle-width: 48px;
+$plus-circle-height: 48px;
+$plus-circle-total-width: 558px;
+$plus-circle-total-height: 452px;
+$plus-circle-image: '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png';
+$plus-circle: (144px, 404px, -144px, -404px, 48px, 48px, 558px, 452px, '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png', 'plus-circle', );
+$settings-02-name: 'settings-02';
+$settings-02-x: 192px;
+$settings-02-y: 404px;
+$settings-02-offset-x: -192px;
+$settings-02-offset-y: -404px;
+$settings-02-width: 48px;
+$settings-02-height: 48px;
+$settings-02-total-width: 558px;
+$settings-02-total-height: 452px;
+$settings-02-image: '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png';
+$settings-02: (192px, 404px, -192px, -404px, 48px, 48px, 558px, 452px, '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png', 'settings-02', );
+$star-gray-name: 'star-gray';
+$star-gray-x: 258px;
+$star-gray-y: 35px;
+$star-gray-offset-x: -258px;
+$star-gray-offset-y: -35px;
+$star-gray-width: 232px;
+$star-gray-height: 40px;
+$star-gray-total-width: 558px;
+$star-gray-total-height: 452px;
+$star-gray-image: '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png';
+$star-gray: (258px, 35px, -258px, -35px, 232px, 40px, 558px, 452px, '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png', 'star-gray', );
+$star-yellow-name: 'star-yellow';
+$star-yellow-x: 258px;
+$star-yellow-y: 75px;
+$star-yellow-offset-x: -258px;
+$star-yellow-offset-y: -75px;
+$star-yellow-width: 232px;
+$star-yellow-height: 40px;
+$star-yellow-total-width: 558px;
+$star-yellow-total-height: 452px;
+$star-yellow-image: '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png';
+$star-yellow: (258px, 75px, -258px, -75px, 232px, 40px, 558px, 452px, '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png', 'star-yellow', );
+$x-close-name: 'x-close';
+$x-close-x: 240px;
+$x-close-y: 404px;
+$x-close-offset-x: -240px;
+$x-close-offset-y: -404px;
+$x-close-width: 48px;
+$x-close-height: 48px;
+$x-close-total-width: 558px;
+$x-close-total-height: 452px;
+$x-close-image: '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png';
+$x-close: (240px, 404px, -240px, -404px, 48px, 48px, 558px, 452px, '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png', 'x-close', );
+$spritesheet-width: 558px;
+$spritesheet-height: 452px;
+$spritesheet-image: '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png';
+$spritesheet-sprites: ($align-top-01, $arrow-narrow-right, $arrow-narrow-up-right, $chevron-down, $chevron-up, $close-menu, $dot-grid, $home-03, $ico-angellist, $ico-dribble, $ico-facebook, $ico-github, $ico-instagram, $ico-linkedin, $ico-m-sm, $ico-naver, $ico-twitter, $ico-youtube, $logo-commerce-white, $logo-commerce, $logo-m, $logo-plusshop, $logo-shopby, $logo-store, $logo-workspace, $m-logo-plusshop, $m-logo-shopby, $m-logo-store, $m-logo-workspace, $mark-isms, $menu-01, $message-smile-circle, $message-smile-square, $minus-circle, $plus-circle, $settings-02, $star-gray, $star-yellow, $x-close, );
+$spritesheet: (558px, 452px, '/Users/hanseungcheol/Desktop/project/commerce-front/packages/ui/assets/images/sprite.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

@@ -1,0 +1,111 @@
+@use 'sass:math';
+@use './function' as fn;
+@use '../base/variable' as v;
+@use '../sprite';
+
+// ===================================
+// debug
+// ===================================
+@mixin debug($color: red) {
+  outline: 1px dashed $color;
+}
+
+// ===================================
+// position
+// ===================================
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin fixed($args...) {
+  @include position(fixed, $args...);
+}
+
+@mixin absolute($args...) {
+  @include position(absolute, $args...);
+}
+
+@mixin relative($args...) {
+  @include position(relative, $args...);
+}
+
+@mixin sticky($args...) {
+  @include position(sticky, $args...);
+}
+
+// ===================================
+// a11y
+// ===================================
+@mixin a11y {
+  @include absolute();
+
+  overflow: hidden;
+  margin: -1px;
+  width: 1px;
+  height: 1px;
+  clip: rect(0, 0, 0, 0);
+}
+
+// ===================================
+// font face
+// use: @include font-face(nbg, '~@/assets/fonts/NanumBarunGothic', normal);
+// ===================================
+@mixin font-face($name, $font-path, $weight: null, $style: normal, $exts: (eot, woff2, woff, ttf)) {
+  $src: null;
+  $formats: (
+    otf: 'openType',
+    ttf: 'trueType'
+  );
+
+  @each $ext in $exts {
+    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+    $src: append($src, url(quote($font-path + '.' + $ext)) format(quote($format)), $separator: comma);
+  }
+
+  @font-face {
+    font-family: quote($name);
+    font-weight: $weight;
+    font-style: $style;
+    src: $src;
+  }
+}
+
+// ===================================
+// @params: $row: number (보여줄 line 수)
+// ===================================
+@mixin ellipsis($row: 1) {
+  $is-multi-line: $row > 1;
+
+  @if ($is-multi-line) {
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $row;
+    line-clamp: $row;
+  }
+
+  overflow: hidden;
+  display: if($is-multi-line, -webkit-box, block);
+  text-overflow: ellipsis;
+  white-space: if($is-multi-line, normal, nowrap);
+  word-wrap: break-word;
+}
+
+@mixin sprite2x($sp) {
+  // @debug $sp;
+
+  $offset-x: math.div(nth($sp, 3), 2);
+  $offset-y: math.div(nth($sp, 4), 2);
+
+  width: math.div(nth($sp, 5), 2);
+  height: math.div(nth($sp, 6), 2);
+  background-position: $offset-x $offset-y;
+}
+
+@mixin bg2x-sprite() {
+  background-image: url('#{v.$sprite-loc}');
+  background-repeat: no-repeat;
+  background-size: math.div(sprite.$spritesheet-width, 2) math.div(sprite.$spritesheet-height, 2);
+}
